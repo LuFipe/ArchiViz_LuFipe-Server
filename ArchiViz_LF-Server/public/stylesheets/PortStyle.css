@@ -1,0 +1,139 @@
+/* Elementos */
+
+body{
+	text-align: center;
+	background-image: url("../Intern_Extern_EDIT.png");
+	background-color: lightgreen;
+	width: 100%;
+	height: 100%;
+	background-size:cover;
+	background-repeat: no-repeat;
+	margin: 0em;
+	/*height:59.5em;*/
+}
+
+/* Classes */
+
+.vp_CLASS{
+	background-color: rgba(07, 03, 83, .6);
+	display: flex;
+	flex-wrap: wrap;
+	padding-left: 2em;
+	padding-right: 2em;
+	padding-top: 2em;
+}
+
+.post_CLASS{
+	background-color: rgba(0,0,0,.7);
+	display: grid;
+	grid-template-columns: 18em;
+	grid-template-rows: 18em;
+	border-radius: 10% 5% 10% 5%;
+	margin-top: 1em;
+	margin-bottom: 2em;
+	margin-left: auto;
+	margin-right: auto;
+	border-color: gold;
+	border-style: solid;
+	border-width: .2em;
+	text-align: -webkit-center;
+}
+
+.smokeScreen_CLASS{
+	background-image: linear-gradient(black 7%, rgba(255,255,255,0),rgba(255,255,255,0), rgba(255,255,255,0), black 93%);
+	grid-column-start: 1;
+	grid-column-end: 2;
+	grid-row-start: 1;
+	grid-column-end: 2;
+	max-width: 100%;
+	max-height: 100%;
+	z-index: 1;
+	border-radius: 10% 5% 10% 5%;
+	display: none;
+	grid-template-columns: repeat(4 , 25%);
+	grid-template-rows: repeat(4 , 25%);
+}
+
+.imgPost_CLASS{
+	background-color: goldenrod;
+	grid-column-start: 1;
+	grid-column-end: 2;
+	grid-row-start: 1;
+	z-index: 0;
+	border-radius: 10% 5% 10% 5%;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	align-self: center;
+}
+
+.titPost_CLASS{
+	color: white;
+	font-size: 2em;
+	align-self: center;
+	grid-column-start: 2;
+	grid-column-end: 4;
+	grid-row-start: 1;
+}
+
+.imgPerf_CLASS{
+	max-width: 100%;
+	max-height: 25%;
+	border-radius: 50%;
+	grid-column-start: 1;
+	grid-column-end: 2;
+	grid-row-start: 4;
+	grid-row-end: 5;
+	align-self: center;
+	text-align: center;
+}
+
+.authPost_CLASS{
+	color: white;
+	font-size: 1.5em;
+	align-self: center;
+	grid-column-start: 2;
+	grid-column-end: 5;
+	grid-row-start: 4;
+	text-align: left;
+	align-self: center;
+}
+
+.clicavel_CLASS{
+	grid-column-start: 1;
+	grid-column-end: 2;
+	grid-row-start: 1;
+	grid-column-end: 2;
+	max-width: 100%;
+	max-height: 100%;
+	z-index: 2;
+	border-radius: 10% 5% 10% 5%;
+	cursor: pointer;
+}
+
+.imgDSP_CLASS{
+	position: fixed;
+	background-color: rgba(0, 0, 0, .7);
+	display: none;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	z-index: 3;
+	text-align: -webkit-center;
+}
+
+/* ID's */
+img#dspIMG_ID{
+	max-width: 100%;
+	max-height: 100%;
+	align-self: center;
+	text-align: center;
+	border-radius: 10% 5% 10% 5%;
+	cursor: pointer;
+}
+
+div#imgFrame_ID{
+	width: 800px;
+	height: 600px;
+	margin: auto;
+}

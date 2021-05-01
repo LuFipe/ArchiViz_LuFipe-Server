@@ -1,0 +1,250 @@
+/*												*/
+/*					COLORS						*/
+/*												*/
+/*	UltraMarine-Darker:		#0C075E				*/
+/*	UltraMarine: 			#120a8f 			*/
+/*	UltraMarine_Pale:		#7B798F 			*/
+/*	UltraMarine_Brighter:	#1A0EC2 			*/
+/*	UltraMarine-Blue: 		#4166f5 			*/
+/*	LightBlue:				#C1CCF5	 			*/
+/*	BabyBlue:				#AFD8F0 			*/
+/* 	SkyBlue-Pale:			#C7E0EB				*/
+/* 	SkyBlue:				#87CEEB				*/
+/*	SkyGreen:				#96E890				*/
+/*	SkyGreen_Saturated:		#0FE800				*/
+/*	SkyGreen_Sat&Brighter:	#066100				*/
+/*	PaleGreen:				#D6FFCF	 			*/
+/*	LimeGreen:				#32CD32	 			*/
+/*	LimeGreen_Brighter:		#3DFF3D	 			*/
+/*	Gold:							 			*/
+/*	GoldenRood:					 				*/
+/*	Black:						 				*/
+/*	White:						 				*/
+/*	wierdcolor: 			#AFD8F0				*/
+
+
+/*				*/
+/*  ELEMENTS	*/
+/*				*/
+
+body{
+	padding: 0em;
+	background-image:linear-gradient(#87CEEB, white) ;
+	text-align: center;
+	width: auto;
+}
+
+header{
+	width: auto;
+	height: 20em;
+	display: grid;
+	grid-template-columns: auto;
+	grid-template-rows: 20em;
+}
+
+section{
+	width: auto;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+footer{
+	width: auto;
+	background-color: black;
+	color: white;
+}
+
+h1{
+	font-size: 7em;
+}
+
+h2{
+	color: goldenrod;
+	font-size: 2em;
+}
+
+h3{
+	height: 3.5em;
+	font-size: 1.4em;
+	color: #3DFF3D;
+	background-image: linear-gradient(90deg ,#7B798F, rgba(0,0,0,0) 110%);
+	text-align: left;
+	padding: .5em;
+	margin: 0em;
+}
+p{
+	font-size: .65em;
+	color: rgb(36, 36, 36);
+	margin: .2em;
+}
+
+li{
+	color: #066100	;
+}
+
+ul{
+	min-height: 5em;
+}
+
+br{
+	margin: 0em;
+}
+a{
+	text-decoration: none;
+}
+
+::-webkit-scrollbar{
+	width: .5em;
+}
+::-webkit-scrollbar-thumb{
+	border-radius: .25em;
+}
+::-webkit-scrollbar-thumb:hover{
+	background-color: goldenrod;
+}
+
+/*				*/
+/*   CLASSES	*/
+/*				*/
+
+.mainBlock_CLASS{
+	/*display: flex;*/
+	flex-wrap: wrap;
+	height: auto;
+	width: auto;
+	padding: 1em;
+	margin: 0em 0em 10em 0em;
+}
+
+.part1_CLASS{
+	width: 23.5em;
+	height: auto;
+	text-align: center;
+	margin-right: auto;
+	margin-left: auto;
+	color: white;
+	/*border-style: dashed;*/
+}
+
+.part2_CLASS{
+	height: auto;
+	text-align: center;
+	margin-right: auto;
+	margin-left: auto;
+	/*border-style: dashed;*/
+}
+
+.expGradBOX_CLASS{
+	margin: 1em auto 1em auto;
+	background-image: linear-gradient(#C7E0EB, rgba(0,0,0,0));
+	width: 23em;
+	height: 45em;
+	border-radius: 0em;
+	box-shadow: rgba(0,0,0,.2) .1em .1em .5em;
+	padding-right: .5em;
+	overflow:auto;
+}
+
+.boxTitle_CLASS{
+	font-size: 3em;
+	margin-top: 1em;
+	margin-bottom: 1em;
+	align-self: center;
+}
+
+.listas_CLASS{
+	text-align: left;
+	padding-inline-start: 1.5em;
+}
+
+.optionMaster_CLASS{
+	margin-bottom: 1em;
+}
+
+
+.descricao_CLASS{
+	margin: 1em auto 1em auto;
+	padding: .12em;
+	color: gold;
+	text-align: justify;
+	font-size: 1.2em;
+	width: 14em;
+}
+
+/*				*/
+/*     ID'S		*/
+/*				*/
+
+img#backGroundIMG_ID{
+	z-index: -1;
+	width: 100%;
+	height: 100%;
+	grid-column-start: 1;
+	grid-row-start: 1;
+	object-fit: cover;
+	opacity: .5;
+}
+
+div#headerTxt_ID{
+	grid-column-start: 1;
+	grid-row-start: 1;
+}
+
+img#imgPerfil_ID{
+	width: 70%;
+	height: 70%;
+	margin: 2em;
+	object-fit: cover;
+	border-radius: 4em .5em 4em .5em;
+	box-shadow: goldenrod .2em .2em 1em;
+}
+
+div#fixedHeader_ID{
+	display: none;
+	position: fixed;
+}
+
+div#divAuth_ID{
+	background-image: linear-gradient(90deg, #08043B 25% ,#120a8f 50%);
+	border-radius: 1em;
+	box-shadow: goldenrod .2em .2em 1em;
+	color: gold;
+}
+
+div#textAuth_ID{
+	display: flex;
+	flex-wrap: wrap;
+	max-height: 50em;
+	padding: .5em;
+	overflow: auto;
+	border-radius: 1em;
+	box-shadow: inset goldenrod 0em 0em .5em;
+}
+
+div#boxTitExpGrad_ID{
+	background-image: linear-gradient(-90deg, #96E890 25%, rgba(0,0,0,0));
+	height: auto;
+}
+
+div#divExpGrad_ID{
+	flex-direction: row-reverse;
+}
+
+div#textExpGrad_ID{
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	max-height: 70em;
+	overflow: auto;
+}
+
+h1#titExpGrad_ID{
+	color: #0C075E;
+}
+
+div#separador_ID{
+	height: .5em;
+	width: 80%;
+	margin: auto;
+	background-color: goldenrod;
+	border-radius: .25em;
+}
