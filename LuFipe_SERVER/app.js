@@ -12,8 +12,8 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 
 //Set View engine
-app.set('view engine', 'pug')
-app.set('views','/PUG')
+app.set('views', './PUG');
+app.set('view engine', 'pug');
 
 //Route para arquivos estaticos
 app.use(express.static(path.join(__dirname, 'FrontEnd')));
