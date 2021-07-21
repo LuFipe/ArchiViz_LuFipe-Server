@@ -1,0 +1,212 @@
+/*												*/
+/*					COLORS						*/
+/*												*/
+/*	UltraMarine-Darker:		#0C075E				*/
+/*	UltraMarine: 			#120a8f 			*/
+/*	UltraMarine_Pale:		#7B798F 			*/
+/*	UltraMarine_Brighter:	#1A0EC2 			*/
+/*	UltraMarine-Blue: 		#4166f5 			*/
+
+
+/*	ELEMENTOS PRIMARIOS	*/
+
+body{
+	padding: 0em;
+	margin: 0em;
+	text-align: center;
+}
+
+header{
+	width: 100%;
+	height: 3em;
+	display: flex;
+	flex-wrap: wrap;
+	color: white;
+	background-color: black;
+	text-align: center;
+	font-size: 2em;
+}
+
+section{
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+footer{
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+h1{
+	margin: .5em 0em auto 1em;
+
+}
+
+h2{
+	margin: auto auto auto 2em;
+	color: goldenrod;
+}
+
+h3{
+	height: 3.5em;
+	font-size: 1em;
+	color: #3DFF3D;
+	background-image: linear-gradient(90deg ,#7B798F, rgba(0,0,0,0) 110%);
+	text-align: left;
+	padding: .5em;
+	margin: 0em;
+}
+
+h4{
+	margin: 3.5em auto auto .5em;
+	font-size: .7em;
+}
+
+p{
+	margin: .5em auto .5em auto;
+}
+
+a{
+	text-decoration: none;
+}
+
+/*		CLASSES			*/
+
+.separadorH_CLASS{
+	height: .2em;
+	width: 95%;
+	background-color: goldenrod;
+	border-radius: .1em;
+	align-self: center;
+	margin: auto auto .5em auto;
+}
+
+.highImg_CLASS{
+	width: 90%;
+	height: 10em;
+	object-fit: cover;
+	padding: .5em;
+	margin: auto;
+}
+
+.btn_CLASS{
+	width: 11em;
+	height: 2em;
+	font-size: 1.2em;
+	margin: auto;
+	border-style: none solid none solid;
+	border-color: #0BA10B;
+	color: #0BA10B;
+	background-color: rgba(0,0,0,0);
+	cursor: pointer;
+}
+
+.txtAbout_CLASS{
+	text-align: justify; 
+	text-indent: 1.5em;
+}
+
+/*		ID's			*/
+
+div#intro_ID{
+	display: grid;
+	grid-template-columns: 75% 25%;
+	grid-template-rows: 4em .4em 40em;
+	margin: 0em auto 5em auto;
+	color: gold;
+	background-image: linear-gradient(black, white);
+	text-align: left;
+}
+
+
+div#highDiv_ID{
+	display: flex;
+	flex-direction: column;
+}
+
+img#mainImage_ID{
+	width: 92%;
+	height: 92%;
+	padding: .5em;
+	margin: auto;
+	object-fit: cover;
+}
+
+img#perfImage_ID{
+	width: 92%;
+	height: 100%;
+	grid-row-start: 1;
+	grid-row-end: 3;
+	margin: auto;
+	object-fit: cover;
+	border-radius: 5em 1em 5em 1em;
+	box-shadow: .5em .5em 1em;
+}
+
+div#authSection_ID{
+	display: grid;
+	grid-template-columns: 25% 75%;
+	grid-template-rows: 3.5em 21.5em ;
+	background-image:linear-gradient(white, #0C075E);
+	padding-top: 5em;
+	padding-bottom: 5em;
+}
+
+div#authVP_ID{
+	display: grid;
+	box-shadow: inset 0.25em 0em .5em;
+	border-radius: .2em;
+	overflow: auto;
+	padding: 0.5em;
+	background-image:linear-gradient(white, #0C075E);
+}
+
+div#authBtn_ID{
+	display: flex;
+	overflow: auto;
+}
+
+div#aboutGrid_ID{
+	grid-column-start: 1;
+	grid-row-start: 1;
+	display: block;
+}
+
+div#boxViewport_ID{
+	display: flex;
+	flex-wrap: wrap;
+	overflow: auto;
+	height: 85%;
+	max-width: 100%;
+	margin: auto;
+	padding: 1em;
+	box-shadow: inset black 0em 0em 1em;
+}
+
+div#showRoom_ID{
+	position: fixed;
+	display: none;
+	z-index: 3;
+	background-color: rgba(0,0,0,.5);
+	width: 100%;
+	height: 100%;
+}
+
+img#showRoomIMG_ID{
+	width: 800px;
+	height: 600px;
+	object-fit: contain;
+	margin: auto;
+	cursor: pointer;
+}
+
+/*	TOOLS	*/
+::-webkit-scrollbar{
+	width: .5em;
+	height: .5em;
+}
+::-webkit-scrollbar-thumb{
+	background-color: goldenrod;
+	border-radius: .25em;
+	border-color: black;
+	border-style: solid;
+	border-width: .05em;
+}

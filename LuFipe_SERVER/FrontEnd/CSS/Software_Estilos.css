@@ -1,0 +1,69 @@
+.softCel_CLASS{
+	width: 15em;
+	height: 3em;
+	display: grid;
+	grid-template-columns: 3em 12em;
+	grid-template-rows: 2em 1em;
+	margin-top: 3em;
+	margin-right: auto;
+	margin-bottom: 3em;
+	margin-left: auto;
+	border-radius: 3em 0em 0em 3em ;
+	background-image: linear-gradient(90deg ,#7B798F, rgba(0,0,0,0) 110%);
+}
+
+.softIMG_CLASS{
+	grid-column-start: 1;
+	grid-column-end: 2;
+	grid-row-start: 1;
+	grid-row-end: 3;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	border-radius: 50%;
+	/*background-color: white;*/
+
+}
+
+.softSoft_CLASS{
+	grid-column-start: 2;
+	grid-column-end: 3;
+	grid-row-start: 1;
+	grid-row-end: 2;
+	font-size: 1.5em;
+	font-weight: 500;
+	text-align: left;
+	padding: .3em;
+	border-style: none none solid none;
+	border-width: .05em;
+	color: #3DFF3D;
+}
+
+.softLv_CLASS{
+	grid-column-start: 2;
+	grid-column-end: 3;
+	grid-row-start: 2;
+	grid-row-end: 3;
+	border-style: solid none none none;
+	border-width: .05em;
+	line-height: 1em;
+	color: #3DFF3D;
+}
+
+div#softGrid_ID{
+	grid-column-start: 1 ;
+	grid-row-start: 1;
+	display: none;
+	flex-wrap: wrap;
+}
+
+div#soft_ID{
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row-reverse;
+}
+
+div#titSoft_ID{
+	color: #0C075E;
+	background-image: linear-gradient(-90deg ,#96E890, rgba(0,0,0,0) 110%);
+}

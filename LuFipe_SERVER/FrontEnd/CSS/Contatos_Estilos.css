@@ -1,0 +1,53 @@
+.contCel_CLASS{
+	max-width: 25em;
+	height: 3em;
+	display: grid;
+	grid-template-columns: 3em 22em;
+	grid-template-rows: 2em 1em;
+	margin: 1em auto 1em auto ;
+	border-radius: 3em 1em 1em 3em ;
+	background-image: linear-gradient(white, rgba(0,0,0,0));
+}
+
+.emptyContCel_CLASS{
+	width: 15em;
+	height: 3em;
+	margin: .2em;
+}
+
+.contIMG_CLASS{
+	grid-column-start: 1;
+	grid-column-end: 2;
+	grid-row-start: 1;
+	grid-row-end: 3;
+	width: 80%;
+	height: 80%;
+	margin: auto;
+	object-fit: contain;
+
+}
+
+.contCont_CLASS{
+	grid-column-start: 2;
+	grid-column-end: 3;
+	grid-row-start: 1;
+	grid-row-end: 2;
+	font-size: 1.5em;
+	font-weight: 500;
+	text-align: left;
+	padding: .3em;
+	border-style: none none solid none;
+	border-width: .05em;
+	color: black;
+}
+
+div#contGrid_ID{
+	grid-column-start: 1;
+	grid-row-start: 1;
+	display: none;
+	flex-wrap: wrap;
+}
+
+div#titCont_ID{
+	color: white;
+}

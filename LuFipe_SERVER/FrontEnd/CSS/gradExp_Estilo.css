@@ -1,0 +1,53 @@
+
+li{
+	color: #066100	;
+}
+
+ul{
+	min-height: 5em;
+}
+
+.optionMaster_CLASS{
+	margin-bottom: 1em;
+}
+
+
+.listas_CLASS{
+	text-align: left;
+	padding-inline-start: 1.5em;
+}
+
+.expGradBOX_CLASS{
+	margin: 1em auto 1em auto;
+	background-image: linear-gradient(#C7E0EB, rgba(0,0,0,0));
+	width: 21em;
+	height: 27em;
+	border-radius: 0em;
+	box-shadow: rgba(0,0,0,.2) .1em .1em .5em;
+	padding-right: .5em;
+	overflow:auto;
+}
+
+div#boxTitExpGrad_ID{
+	background-image: linear-gradient(-90deg, #96E890 25%, rgba(0,0,0,0));
+	height: auto;
+}
+
+div#divExpGrad_ID{
+	grid-column-start: 1;
+	grid-row-start: 1;
+	display: none;
+	flex-direction: row-reverse;
+}
+
+div#textExpGrad_ID{
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	max-height: 70em;
+	overflow: auto;
+}
+
+h1#titExpGrad_ID{
+	color: #0C075E;
+}
