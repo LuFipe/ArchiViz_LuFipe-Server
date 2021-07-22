@@ -20,6 +20,10 @@ const INFO = dataBase.define('INFO',
 			allowNull: false,
 			unique: true
 		},
+		NIVEL:{
+			type: sequelize.INTEGER,
+			allowNull: false
+		},
 		FILE:{
 			type: sequelize.STRING,
 			allowNull: false,

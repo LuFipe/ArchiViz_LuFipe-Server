@@ -42,7 +42,7 @@ router.get('/informacao',
 )
 router.post('/criarInformacao',
 	(req,res,next)=>{
-		banco.CreateInformacao(req, res, next);
+		banco.CreateInfo(req, res, next);
 		res.redirect('/');
 	}
 )

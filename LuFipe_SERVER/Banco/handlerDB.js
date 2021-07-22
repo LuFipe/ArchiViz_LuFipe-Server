@@ -117,6 +117,7 @@ module.exports.CreateInfo = async (req,res,next)=>{
 		const criarCadastro = await INFO.create({
 			TITULO: req.body.titulo,
 			TIPO: req.body.tipo,
+			NIVEL: Number(req.body.nivel),
 			FILE: req.body.file,
 		})
 		console.log(criarCadastro)

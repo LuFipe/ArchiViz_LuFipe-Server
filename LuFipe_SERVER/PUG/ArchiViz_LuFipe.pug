@@ -75,20 +75,20 @@ html(lang="pt-br")
 					if usuario[0]
 						div(id="aboutGrid_ID")
 							p=usuario[0].DESCRICAO
-					div(id="divExpGard_ID", class="mainBlock_CLASS")
+					div(id="divExpGard_ID", class="mainBlock_CLASS", style="display: none")
 					if info
 						div(id="softGrid_ID")
 							each elem,i in info
 								if elem.TIPO == "software"
 									div(name="softCel", class="softCel_CLASS")
 										img(name="softIMG", class="softIMG_CLASS", src=`${"/IMAGENS/INFO/"+elem.FILE}`, alt=elem.FILE)
-										div(name="softSoft", class="softSoft_CLASS")
-										div(name="softLv", class="softLv_CLASS")
+										div(name="softSoft", class="softSoft_CLASS") #{elem.TITULO}
+										div(name="softLv", class="softLv_CLASS") 
 											each i in [0,1,2,3,4]
-												if elem.lv > i
-													span 0x26AB
+												if elem.NIVEL > i
+													span &#x26AB
 												else
-													span 0x26AA
+													span &#x26AA
 							else
 								p NO DATA
 						div(id="hobbieGrid_ID")
@@ -96,14 +96,27 @@ html(lang="pt-br")
 								if elem.TIPO == "hobbie"
 									div(name="hobbyCel", class="hobbyCel_CLASS")
 										img(name="hobbyIMG", class="hobbyIMG_CLASS", src=`${"/IMAGENS/INFO/"+elem.FILE}`, alt=elem.FILE)
-										div(name="hobbyHobby", class="hobbyHobby_CLASS")
-										div(name="softLv", class="softLv_CLASS")
+										div(name="hobbyHobby", class="hobbyHobby_CLASS") #{elem.TITULO}
+										div(name="softLv", class="softLv_CLASS") 
 											each i in [0,1,2,3,4]
-												if elem.lv > i
-													span 0x26AB
+												if elem.NIVEL > i
+													span &#x26AB
 												else
-													span 0x26AA
+													span &#x26AA
 							else
 								p NO DATA
 						div(id="contGrid_ID")
+							each elem,i in info
+								if elem.TIPO == "contato"
+									div(name="contCel", class="contCel_CLASS")
+										img(name="contIMG", class="contIMG_CLASS", src=`${"/IMAGENS/INFO/"+elem.FILE}`, alt=elem.FILE)
+										div(name="contCont", class="contCont_CLASS") #{elem.TITULO}
+										div(name="softLv", class="softLv_CLASS")
+											each i in [0,1,2,3,4]
+												if elem.NIVEL > i
+													span &#x26AB
+												else
+													span &#x26AA
+							else
+								p NO DATA
 		script(src="/JS/Basic_Interactio.js") 
