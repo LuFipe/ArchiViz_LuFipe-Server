@@ -42,7 +42,8 @@ html(lang="pt-br")
 								if elem.TIPO == "ambiente"
 									div(name="smokeScreen", class="smokeScreen_CLASS")
 										div(name="titPost", class="titPost_CLASS") #{elem.NOME}
-										img(name="imgPerf", class="imgPerf_CLASS", src=`${"/IMAGENS/"+usuario.PERFIL}`, alt=usuario.PERFIL)
+										if usuario
+											img(name="imgPerf", class="imgPerf_CLASS", src=`${"/IMAGENS/"+usuario.PERFIL}`, alt=usuario.PERFIL)
 										div(name="authPost", class="authPost_CLASS") #{elem.AUTOR}
 									img(name="imgPost", class="imgPost_CLASS", src=`${"/IMAGENS/PROJETOS/"+elem.FILE}`, alt=elem.FILE)
 									div(name="clicavel", class="clicavel_CLASS")
@@ -74,9 +75,9 @@ html(lang="pt-br")
 						div(id="aboutGrid_ID")
 							p=usuario.DESCRICAO
 					div(id="divExpGard_ID", class="mainBlock_CLASS")
-					if INFO
+					if info
 						div(id="softGrid_ID")
-							each elem,i in INFO
+							each elem,i in info
 								if elem.TIPO == "software"
 									div(name="softCel", class="softCel_CLASS")
 										img(name="softIMG", class="softIMG_CLASS", src=`${"/IMAGENS/INFO/"+elem.FILE}`, alt=elem.FILE)
@@ -90,7 +91,7 @@ html(lang="pt-br")
 							else
 								p NO DATA
 						div(id="hobbieGrid_ID")
-							each elem,i in INFO
+							each elem,i in info
 								if elem.TIPO == "hobbie"
 									div(name="hobbyCel", class="hobbyCel_CLASS")
 										img(name="hobbyIMG", class="hobbyIMG_CLASS", src=`${"/IMAGENS/INFO/"+elem.FILE}`, alt=elem.FILE)
