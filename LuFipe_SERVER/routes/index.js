@@ -1,25 +1,50 @@
 let express = require('express');
 let router = express.Router();
-let path  =require('path')
+let path =require('path')
 let banco = require('../Banco/handlerDB');
 
 
 /* GET home page. */
-router.get('/', function(req, res, next) {
-  console.log("\n\nComeçaremos a pegar as informações do Banco de Dados:\n\n")
+router.get('/', banco.SendData);
 
-  let user = banco.ReadUsuario();
-  console.log("\n\nInformações de Usuario"+JSON.stringify(user));
+/*Get pagina de criação da postagem(temporario) */
+router.get('/postagem',
+	(req,res,next)=>{
+		res.render('postagem')
+	}
+)
+router.post('/criarPostagem',
+	(req,res,next)=>{
+		banco.CreateImage(req, res, next);
+		res.redirect('/');
+	}
+)
 
-  let image = banco.ReadImagem();
-  console.log("\n\nInformações de Imagem"+JSON.stringify(image));
+/*Get pagina de criação da usuario(temporario) */
+router.get('/usuario',
+	(req,res,next)=>{
+		res.render('usuario')
+	}
+)
+router.post('/criarUsuario',
+	(req,res,next)=>{
+		console.log("\n\nEntrando para cadastrar usuario\n\n")
+		banco.CreateUsuario(req, res, next);
+		res.redirect('/');
+	}
+)
 
-  let inf = banco.ReadInfo();
-  console.log("\n\nInformações de informações"+JSON.stringify(inf));
-  
-  console.log("\n\nInformações do BD foram pegas e serão repassadas:\n\n")
-  console.log("\n\nSe preparando para renderizar:\n\n")
-  res.render("ArchiViz_LuFipe",{'usuario': user, 'imagem': image, 'info': inf});
-});
+/*Get pagina de criação da info(temporario) */
+router.get('/informacao',
+	(req,res,next)=>{
+		res.render('informacao')
+	}
+)
+router.post('/criarInformacao',
+	(req,res,next)=>{
+		banco.CreateInformacao(req, res, next);
+		res.redirect('/');
+	}
+)
 
 module.exports = router;

@@ -1,0 +1,28 @@
+doctype html
+html(lang="en")
+	head
+		meta(charset="UTF-8")
+		meta(http-equiv="X-UA-Compatible", content="IE=edge")
+		meta(name="viewport", content="width=device-width, initial-scale=1.0")
+		title Document
+	body
+		header
+		main
+			form(action="/criarPostagem", method="post", style="display:grid")
+				label(for="nome") NOME DO PROJETO
+				input(type="text", name="nome")
+
+				label(for="autor") AUTOR DO PROJETO
+				input(type="text", name="autor")
+
+				label(for="descricao") DESCRIÇÃO DO PROJETO
+				input(type="text", name="descricao")
+
+				label(for="tipo") TIPO DO PROJETO
+				input(type="text", name="tipo")
+
+				label(for="file") NOME DA IMAGEM
+				input(type="text", name="file")
+				
+				button(type="submit") criar postagem
+		footer
