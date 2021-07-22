@@ -36,12 +36,29 @@ html(lang="pt-br")
 					button(class="btn_CLASS", style="margin-left: .25em;") Visualização 3D
 				div(class="separadorH_CLASS" style="background-color:#0BA10B;")
 				div(id="boxViewport_ID")
-					div(class="portfolioViewport_CLASS", id="portfolioAmbientes_ID", style="display: flex;")
-					div(class="portfolioViewport_CLASS" id="portfolioModelos_ID"  style="display: none;")
-					div(class="portfolioViewport_CLASS" id="portfolio3Dviews_ID"  style="display: none;")
+					if imagem
+						div(class="portfolioViewport_CLASS", id="portfolioAmbientes_ID", style="display: flex;")
+							each elem,i in imagem
+								if elem.TIPO == "ambiente"
+									div(name="smokeScreen", class="smokeScreen_CLASS")
+										div(name="titPost", class="titPost_CLASS") #{elem.NOME}
+										img(name="imgPerf", class="imgPerf_CLASS", src=("/IMAGENS/"+usuario.PERFIL), alt=usuario.PERFIL)
+										div(name="authPost", class="authPost_CLASS") #{elem.AUTOR}
+									img(name="imgPost", class="imgPost_CLASS", src=("/IMAGENS/PROJETOS/"+elem.FILE), alt=elem.FILE)
+									div(name="clicavel", class="clicavel_CLASS")
+						div(class="portfolioViewport_CLASS" id="portfolioModelos_ID"  style="display: none;")
+							each elem,i in imagem
+								if elem.TIPO == "modelo"
+									div(name="smokeScreen", class="smokeScreen_CLASS")
+										div(name="titPost", class="titPost_CLASS") #{elem.NOME}
+										div(name="authPost", class="authPost_CLASS") #{elem.AUTOR}
+									img(name="imgPost", class="imgPost_CLASS", src=("/IMAGENS/PROJETOS/"+elem.FILE), alt=elem.FILE)
+									div(name="clicavel", class="clicavel_CLASS")
+						div(class="portfolioViewport_CLASS" id="portfolio3Dviews_ID"  style="display: none;")
 		footer
 			section(id="authSection_ID")
-				img(id="perfImage_ID", src="", alt="FOTOPERFIL")
+				if usuario
+					img(id="perfImage_ID", src=("/IMAGENS/"+usuario.PERFIL), alt="FOTOPERFIL")
 				div(id="authBtn_ID")
 					button(class="btn_CLASS") Sobre
 					button(class="btn_CLASS") Graduação 
@@ -49,4 +66,34 @@ html(lang="pt-br")
 					button(class="btn_CLASS") Hobbies 
 					button(class="btn_CLASS") Contatos
 				div(id="authVP_ID")
+					if usuario
+						div(id="aboutGrid_ID")
+							p=usuario.DESCRICAO
+					div(id="divExpGard_ID", class="mainBlock_CLASS")
+					if INFO
+						div(id="softGrid_ID")
+							each elem,i in INFO
+								if elem.TIPO == "software"
+									div(name="softCel", class="softCel_CLASS")
+										img(name="softIMG", class="softIMG_CLASS", src=("/IMAGENS/INFO/"+elem.FILE), alt=elem.FILE)
+										div(name="softSoft", class="softSoft_CLASS")
+										div(name="softLv", class="softLv_CLASS")
+											each lv,i in range(0:5)
+												if elem.lv <= i
+													span 0x26AB
+												else
+													span 0x26AA
+						div(id="hobbieGrid_ID")
+							each elem,i in INFO
+								if elem.TIPO == "hobbie"
+									div(name="hobbyCel", class="hobbyCel_CLASS")
+										img(name="hobbyIMG", class="hobbyIMG_CLASS", src=("/IMAGENS/INFO/"+elem.FILE), alt=elem.FILE)
+										div(name="hobbyHobby", class="hobbyHobby_CLASS")
+										div(name="softLv", class="softLv_CLASS")
+											each lv,i in range(0:5)
+												if elem.lv <= i
+													span 0x26AB
+												else
+													span 0x26AA
+						div(id="contGrid_ID")
 		script(src="") 
