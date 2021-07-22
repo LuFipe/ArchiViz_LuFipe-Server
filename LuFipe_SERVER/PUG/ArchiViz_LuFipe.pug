@@ -42,18 +42,22 @@ html(lang="pt-br")
 								if elem.TIPO == "ambiente"
 									div(name="smokeScreen", class="smokeScreen_CLASS")
 										div(name="titPost", class="titPost_CLASS") #{elem.NOME}
-										img(name="imgPerf", class="imgPerf_CLASS", src=("/IMAGENS/"+usuario.PERFIL), alt=usuario.PERFIL)
+										img(name="imgPerf", class="imgPerf_CLASS", src=`${"/IMAGENS/"+usuario.PERFIL}`, alt=usuario.PERFIL)
 										div(name="authPost", class="authPost_CLASS") #{elem.AUTOR}
-									img(name="imgPost", class="imgPost_CLASS", src=("/IMAGENS/PROJETOS/"+elem.FILE), alt=elem.FILE)
+									img(name="imgPost", class="imgPost_CLASS", src=`${"/IMAGENS/PROJETOS/"+elem.FILE}`, alt=elem.FILE)
 									div(name="clicavel", class="clicavel_CLASS")
+							else
+								p NO DATA
 						div(class="portfolioViewport_CLASS" id="portfolioModelos_ID"  style="display: none;")
 							each elem,i in imagem
 								if elem.TIPO == "modelo"
 									div(name="smokeScreen", class="smokeScreen_CLASS")
 										div(name="titPost", class="titPost_CLASS") #{elem.NOME}
 										div(name="authPost", class="authPost_CLASS") #{elem.AUTOR}
-									img(name="imgPost", class="imgPost_CLASS", src=("/IMAGENS/PROJETOS/"+elem.FILE), alt=elem.FILE)
+									img(name="imgPost", class="imgPost_CLASS", src=`${"/IMAGENS/PROJETOS/"+elem.FILE}`, alt=elem.FILE)
 									div(name="clicavel", class="clicavel_CLASS")
+							else
+								p NO DATA
 						div(class="portfolioViewport_CLASS" id="portfolio3Dviews_ID"  style="display: none;")
 		footer
 			section(id="authSection_ID")
@@ -75,25 +79,29 @@ html(lang="pt-br")
 							each elem,i in INFO
 								if elem.TIPO == "software"
 									div(name="softCel", class="softCel_CLASS")
-										img(name="softIMG", class="softIMG_CLASS", src=("/IMAGENS/INFO/"+elem.FILE), alt=elem.FILE)
+										img(name="softIMG", class="softIMG_CLASS", src=`${"/IMAGENS/INFO/"+elem.FILE}`, alt=elem.FILE)
 										div(name="softSoft", class="softSoft_CLASS")
 										div(name="softLv", class="softLv_CLASS")
-											each lv,i in range(0:5)
-												if elem.lv <= i
+											each i in [0,1,2,3,4]
+												if elem.lv > i
 													span 0x26AB
 												else
 													span 0x26AA
+							else
+								p NO DATA
 						div(id="hobbieGrid_ID")
 							each elem,i in INFO
 								if elem.TIPO == "hobbie"
 									div(name="hobbyCel", class="hobbyCel_CLASS")
-										img(name="hobbyIMG", class="hobbyIMG_CLASS", src=("/IMAGENS/INFO/"+elem.FILE), alt=elem.FILE)
+										img(name="hobbyIMG", class="hobbyIMG_CLASS", src=`${"/IMAGENS/INFO/"+elem.FILE}`, alt=elem.FILE)
 										div(name="hobbyHobby", class="hobbyHobby_CLASS")
 										div(name="softLv", class="softLv_CLASS")
-											each lv,i in range(0:5)
-												if elem.lv <= i
+											each i in [0,1,2,3,4]
+												if elem.lv > i
 													span 0x26AB
 												else
 													span 0x26AA
+							else
+								p NO DATA
 						div(id="contGrid_ID")
 		script(src="") 
