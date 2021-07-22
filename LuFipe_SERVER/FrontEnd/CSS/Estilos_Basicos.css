@@ -106,7 +106,7 @@ a{
 
 /*		ID's			*/
 
-div#intro_ID{
+section#intro_ID{
 	display: grid;
 	grid-template-columns: 75% 25%;
 	grid-template-rows: 4em .4em 40em;
@@ -141,7 +141,7 @@ img#perfImage_ID{
 	box-shadow: .5em .5em 1em;
 }
 
-div#authSection_ID{
+section#authSection_ID{
 	display: grid;
 	grid-template-columns: 25% 75%;
 	grid-template-rows: 3.5em 21.5em ;

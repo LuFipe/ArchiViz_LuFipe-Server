@@ -23,30 +23,31 @@ html(lang="pt-br")
 				h2 Destaques 
 				div(class="separadorH_CLASS")
 				div(class="separadorH_CLASS")
-				img(id="mainImage_ID", src="", alt="MAINDIV_IMAGE")
+				img(id="mainImage_ID", src=`${"/IMAGENS/PROJETOS/"+imagem[0].FILE}`, alt="MAINDIV_IMAGE")
 				div(id="highDiv_ID")
-					img(src="", alt="IMG_1")
-					img(src="", alt="IMG_2")
-					img(src="", alt="IMG_2")
+					img(class="highImg_CLASS", src=`${"/IMAGENS/PROJETOS/"+imagem[1].FILE}`, alt="IMG_1")
+					img(class="highImg_CLASS", src=`${"/IMAGENS/PROJETOS/"+imagem[2].FILE}`, alt="IMG_2")
+					img(class="highImg_CLASS", src=`${"/IMAGENS/PROJETOS/"+imagem[3].FILE}`, alt="IMG_2")
 			section(id="sectionPortfolio_ID")
 				div(style="display: flex")
 					h2(style="font-size: 3.5em; margin: auto 1em auto 1em; color: #0BA10B;") Portfolio 
-					button(class="btn_CLASS", style="margin-right: .25em; margin-left: 1em;") Ambientes 
-					button(class="btn_CLASS", style="margin: auto .25em auto .25em") Modelos 3D
-					button(class="btn_CLASS", style="margin-left: .25em;") Visualização 3D
+					button(class="btn_CLASS", style="margin-right: .25em; margin-left: 1em;", onclick="dspAmbiente()") Ambientes 
+					button(class="btn_CLASS", style="margin: auto .25em auto .25em", onclick="dspModelo()") Modelos 3D
+					button(class="btn_CLASS", style="margin-left: .25em;", onclick="dsp3DView()") Visualização 3D
 				div(class="separadorH_CLASS" style="background-color:#0BA10B;")
 				div(id="boxViewport_ID")
 					if imagem
 						div(class="portfolioViewport_CLASS", id="portfolioAmbientes_ID", style="display: flex;")
 							each elem,i in imagem
-								if elem.TIPO == "ambiente"
-									div(name="smokeScreen", class="smokeScreen_CLASS")
-										div(name="titPost", class="titPost_CLASS") #{elem.NOME}
-										if usuario[0]
-											img(name="imgPerf", class="imgPerf_CLASS", src=`${"/IMAGENS/"+usuario[0].PERFIL}`, alt=usuario[0].PERFIL)
-										div(name="authPost", class="authPost_CLASS") #{elem.AUTOR}
-									img(name="imgPost", class="imgPost_CLASS", src=`${"/IMAGENS/PROJETOS/"+elem.FILE}`, alt=elem.FILE)
-									div(name="clicavel", class="clicavel_CLASS")
+								div(name="post", class="post_CLASS")
+									if elem.TIPO == "ambiente"
+										div(name="smokeScreen", class="smokeScreen_CLASS")
+											div(name="titPost", class="titPost_CLASS") #{elem.NOME}
+											if usuario[0]
+												img(name="imgPerf", class="imgPerf_CLASS", src=`${"/IMAGENS/"+usuario[0].PERFIL}`, alt=usuario[0].PERFIL)
+											div(name="authPost", class="authPost_CLASS") #{elem.AUTOR}
+										img(name="imgPost", class="imgPost_CLASS", src=`${"/IMAGENS/PROJETOS/"+elem.FILE}`, alt=elem.FILE)
+										div(name="clicavel", class="clicavel_CLASS")
 							else
 								p NO DATA
 						div(class="portfolioViewport_CLASS" id="portfolioModelos_ID"  style="display: none;")
@@ -65,11 +66,11 @@ html(lang="pt-br")
 				if usuario[0]
 					img(id="perfImage_ID", src=("/IMAGENS/"+usuario[0].PERFIL), alt="FOTOPERFIL")
 				div(id="authBtn_ID")
-					button(class="btn_CLASS") Sobre
-					button(class="btn_CLASS") Graduação 
-					button(class="btn_CLASS") Software 
-					button(class="btn_CLASS") Hobbies 
-					button(class="btn_CLASS") Contatos
+					button(class="btn_CLASS", onclick="dspSobre()") Sobre
+					button(class="btn_CLASS", onclick="dspExpGrad()") Graduação 
+					button(class="btn_CLASS", onclick="dspSoft()") Software 
+					button(class="btn_CLASS", onclick="dspHobby()") Hobbies 
+					button(class="btn_CLASS", onclick="dspCont()") Contatos
 				div(id="authVP_ID")
 					if usuario[0]
 						div(id="aboutGrid_ID")
@@ -105,4 +106,4 @@ html(lang="pt-br")
 							else
 								p NO DATA
 						div(id="contGrid_ID")
-		script(src="") 
+		script(src="/JS/Basic_Interactio.js") 
