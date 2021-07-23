@@ -8,18 +8,17 @@ html(lang="en")
 	body
 		header
 		main
-			form(action="/criarUsuario", method="post", style="display:grid")
-				label(for="nome") NOME
+			form(action="/criarUsuario", method="post", enctype="multipart/form-data" ,style="display:grid")
+				label(for="nome") NOME DO USUÁRIO
 				input(type="text", name="nome")
 
 				label(for="descricao") DESCRIÇÃO DO PERFIL
 				input(type="text", name="descricao")
 
-				label(for="perfil") ARQUIVO FOTO DE PERFIL
-				input(type="text", name="perfil")
-
 				label(for="status") FORMAÇÃO
-				input(type="text", name="status")
+				select(name="status")
+					option(value="estudante") ESTUDANTE
+					option(value="arquiteto") ARQUITETO
 
 				label(for="instituto") INSTITUTO REFERENTE
 				input(type="text", name="instituto")
@@ -32,6 +31,9 @@ html(lang="en")
 
 				label(for="rg") RG
 				input(type="text", name="rg")
+
+				label(for="arquivo") FOTO DE PERFIL 
+				input(type="file", name="arquivo")
 
 				button(type="submit") criar postagem
 		footer

@@ -18,7 +18,6 @@ const INFO = dataBase.define('INFO',
 		TIPO:{
 			type: sequelize.STRING,
 			allowNull: false,
-			unique: true
 		},
 		NIVEL:{
 			type: sequelize.INTEGER,
